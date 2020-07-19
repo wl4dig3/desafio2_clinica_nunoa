@@ -200,19 +200,19 @@ document.write(consulta.hora);
 
 
 
-// 3er ejercicio: imprimir 
+// 3er ejercicio: imprimir  se usa un forEach y (c) representa cada consulta
 dental.forEach(function(c){
     document.write(`<p> ${c.hora} - ${c.especialista} - ${c.paciente} - ${c.rut} - ${c.prevision}</p>`)
 });
-
-// 4to ejercicio 
+ 
+// 4to ejercicio  se utiliza forEach para la impresion de cadapaceinte por  consulta 
 
 var totalConsulta = [...traumatologia,...radiologia, ...dental];
     totalConsulta.forEach(function(c){
       document.write(`<p>${c.paciente}</p>`)
     });
 
-    // 5to ejercicio
+    // 5to ejercicio se utiliza operador ternario para las condiciones
 
 dental = dental.map(function(d){
     (d.prevision == 'ISAPRE')
