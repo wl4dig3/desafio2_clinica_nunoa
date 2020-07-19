@@ -140,7 +140,8 @@ var dental = [
 
 // TRAUMATOLOGIA
 // ejercicio 1 Se agregan 5 registros a la consulta de Traumatologia con una clase constructora.
-class trauma {
+class trauma  
+  {
   constructor(hora, especialista, paciente, rut, prevision) {
     this.hora = hora;
     this.especialista = especialista;
@@ -148,7 +149,8 @@ class trauma {
     this.rut = rut;
     this.prevision = prevision;
   }
-}
+};
+
 
 let consulta = new trauma(
   "09:00",
@@ -156,28 +158,28 @@ let consulta = new trauma(
   "ANA GELLONA",
   "13123329-7",
   "ISAPRE"
-)
+);
  let consulta2 = new trauma (
       "09:30",
       "MARIA SOLAR",
       "RAMIRO ANDRADE",
       "12221451-k",
       "FONASA"
-    )
+    );
  let consulta3 = new trauma (
       "10:00",
       "RAUL LOYOLA",
       "CARMEN ISLA",
       "10112348-3",
       "ISAPRE"
-)
+);
 let consulta4 = new trauma (
     "10:30",
     "ANTONIO LARENAS",
     "PABLO LOAYSA",
     "13453234-1",
     "ISAPRE"
-)
+);
 let consulta5 = new trauma (
     "12:00",
     "MATIAS ARAVENA",
@@ -185,16 +187,18 @@ let consulta5 = new trauma (
     "14345656-6",
     "FONASA"
 );
+//  se suman el arreglo en una variable traumatologia con la clase trauma para obtner el total de objetos.
+let newTraumaLength = traumatologia.length + trauma.length;
 
 document.write(consulta.hora);
 
 // 2do Ejercicio: Se elimina primer y ultimo elemento del arreglo de Radiologia 
 
- function deleteRadiologia(){
+ 
     radiologia.pop()
     radiologia.shift();
-};
-// function deleteRadiologia();
+
+
 
 // 3er ejercicio: imprimir 
 dental.forEach(function(c){
@@ -218,12 +222,12 @@ dental = dental.map(function(d){
 });
 //Agregar código para el desafio 2 aquí
 
-document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
-document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
-document.write(`<p>Cantidad de atenciones para Dental: ${dental.length}</p>`);
+document.write(`<p>Cantidad total de atenciones para Radiología: ${radiologia.length}</p>`);
+document.write(`<p>Cantidad total  de atenciones para Traumatología: ${newTraumaLength} </p>`);
+document.write(`<p>Cantidad total  de atenciones para Dental: ${dental.length}</p>`);
 
-document.write(`<p>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}.</p>`);
+document.write(`<p>Primera atencion para Radiologia es: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}.</p>`);
 
-document.write(`<p>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}.</p>`);
+document.write(`<p>Primera atencion para trumatologia es: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}.</p>`);
 
-document.write(`<p>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision}.</p>`);
+document.write(`<p>Primera atencion para dental es: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision}.</p>`);
